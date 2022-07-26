@@ -40,6 +40,7 @@ public class Util {
             Driver driver = new com.mysql.cj.jdbc.Driver();
             DriverManager.registerDriver(driver);
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            connection.setAutoCommit(false);
             if (!connection.isClosed()) {
                 System.out.println("Соединение с БД установлено");
             }
