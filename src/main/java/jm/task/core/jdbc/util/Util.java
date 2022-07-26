@@ -30,7 +30,8 @@ public class Util {
     private static final String PASSWORD = "root";
 
     public static void main(String[] args) {
-        getSessionFactory();
+        Util util = new Util();
+        util.getMySQLConnection();
     }
 
     public Connection getMySQLConnection() {
